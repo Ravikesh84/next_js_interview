@@ -2,17 +2,21 @@ import React, { useState } from "react";
 import { Button, TextInput } from "flowbite-react";
 import { HiPlus, HiX, HiTrash } from "react-icons/hi";
 
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface CreateRequestMainComponentProps {}
 
-export function CreateRequestMainComponent(props: CreateRequestMainComponentProps) {
+export function CreateRequestMainComponent(
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  props: CreateRequestMainComponentProps
+) {
   const [urls, setUrls] = useState([""]);
 
-  const handleAddUrl = () =>   
-    {
-      if (urls.length < 10) {  // Limit to 10 URLs
-        setUrls([...urls, ""]);
-      }
-    };
+  const handleAddUrl = () => {
+    if (urls.length < 10) {
+      // Limit to 10 URLs
+      setUrls([...urls, ""]);
+    }
+  };
 
   const handleUrlChange = (index: number, newUrl: string) => {
     const updatedUrls = urls.map((url, i) => (i === index ? newUrl : url));
@@ -41,7 +45,8 @@ export function CreateRequestMainComponent(props: CreateRequestMainComponentProp
             Add videos or folders
           </h4>
           <p className="text-sm text-gray-900 dark:text-gray-400">
-            These videos would be cut, labeled, and made available in your Recharm video library.
+            These videos would be cut, labeled, and made available in your
+            Recharm video library.
           </p>
         </div>
 
@@ -62,7 +67,7 @@ export function CreateRequestMainComponent(props: CreateRequestMainComponentProp
                   onClick={() => handleRemoveUrl(index)}
                   className="text-red-500 hover:text-red-700"
                 >
-                  <HiTrash  className="h-5 w-5" />
+                  <HiTrash className="h-5 w-5" />
                 </button>
               )}
             </div>
@@ -72,7 +77,8 @@ export function CreateRequestMainComponent(props: CreateRequestMainComponentProp
         <Button
           color="light"
           onClick={handleAddUrl}
-          className="text-sm font-medium hover:text-purple-800 bg-white hover:bg-gray-50 border border-gray-300">
+          className="text-sm font-medium hover:text-purple-800 bg-white hover:bg-gray-50 border border-gray-300"
+        >
           <span className="flex items-center">
             <span className="bg-purple-800 rounded-full p-0.5 mr-2">
               <HiPlus className="h-3 w-3 text-white" />
