@@ -72,8 +72,7 @@ export function CreateRequestMainComponent(props: CreateRequestMainComponentProp
         <Button
           color="light"
           onClick={handleAddUrl}
-          className="text-sm font-medium hover:text-purple-800 bg-white hover:bg-gray-50 border border-gray-300"
-        >
+          className="text-sm font-medium hover:text-purple-800 bg-white hover:bg-gray-50 border border-gray-300">
           <span className="flex items-center">
             <span className="bg-purple-800 rounded-full p-0.5 mr-2">
               <HiPlus className="h-3 w-3 text-white" />
