@@ -7,9 +7,12 @@ interface CreateRequestMainComponentProps {}
 export function CreateRequestMainComponent(props: CreateRequestMainComponentProps) {
   const [urls, setUrls] = useState([""]);
 
-  const handleAddUrl = () => {
-    setUrls([...urls, ""]);
-  };
+  const handleAddUrl = () =>   
+    {
+      if (urls.length < 10) {  // Limit to 10 URLs
+        setUrls([...urls, ""]);
+      }
+    };
 
   const handleUrlChange = (index: number, newUrl: string) => {
     const updatedUrls = urls.map((url, i) => (i === index ? newUrl : url));
