@@ -14,7 +14,7 @@ export function CreateRequestMainComponent(
   const handleAddUrl = () => {
     if (urls.length < 10) {
       // Limit to 10 URLs
-      setUrls([...urls, ""]);
+      setUrls([...urls,]);
     }
   };
 
